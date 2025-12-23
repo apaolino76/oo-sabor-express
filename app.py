@@ -1,0 +1,12 @@
+from modelos.restaurante import Restaurante
+
+restaurante_praca = Restaurante('praça', 'Gourmet')
+restaurante_mexicano = Restaurante('mexican food', 'Mexicana')
+restaurante_mexicano.alternar_estado()
+restaurante_japones = Restaurante('Japa', 'Japonesa')
+
+def main():
+    Restaurante.listar_restaurantes()
+
+if __name__ == '__main__':
+    main()
