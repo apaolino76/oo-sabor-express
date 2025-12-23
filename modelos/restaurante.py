@@ -1,4 +1,5 @@
 from modelos.avaliacao import Avaliacao
+from modelos.cardapio.item_cardapio import ItemCardapio
 
 class Restaurante:
     """Representa um restaurante e suas características."""
@@ -60,8 +61,12 @@ class Restaurante:
         soma = sum(avaliacao._nota for avaliacao in self._avaliacao)
         return round((soma/len(self._avaliacao)), 1)
     
-    def adicionar_bebida_no_cardapio(self, bebida):
-        self._cardapio.append(bebida)
+    # def adicionar_bebida_no_cardapio(self, bebida):
+    #     self._cardapio.append(bebida)
     
-    def adicionar_prato_no_cardapio(self, prato):
-        self._cardapio.append(prato)
+    # def adicionar_prato_no_cardapio(self, prato):
+    #     self._cardapio.append(prato)
+
+    def adicionar_no_cardapio(self, item):
+        if isinstance(item, ItemCardapio):
+            self._cardapio.append(item)
